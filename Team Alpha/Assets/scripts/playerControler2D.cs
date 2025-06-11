@@ -5,6 +5,8 @@ using UnityEngine;
 public class playerControler2D : MonoBehaviour
 {
    
+
+   
     public float MovementSpeed = 2.0f;
     public float jumpSpeed = 1f;
     public float groundRadiusCheck = 0.3f;
@@ -26,13 +28,13 @@ public class playerControler2D : MonoBehaviour
     void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
-        jumpInput = Input.GetButton("Jump")     ;
 
-       
-        //if(Input.GetButtonDown("Fire1"))
-        //{
-        //    anim.SetTrigger("Attack");
-        //}
+
+        //add coyote time speak to tom.
+        jumpInput = Input.GetButton("Jump");
+
+        if (rb.velocity.y < 0)
+      
 
         if (moveInput < 0)
             faceRight = false;
