@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerControler2D : MonoBehaviour
+public class PlayerControllerSideScroller : MonoBehaviour
 {
    
 
@@ -14,6 +14,10 @@ public class playerControler2D : MonoBehaviour
     bool faceRight = false;
     //SpriteRenderer characterSprite;
     //Animator anim;
+
+
+    public string HorizontalInput = "Horizontal";
+    public string JumpInput = "Jump";
 
     Rigidbody rb;
     float moveInput;
@@ -27,11 +31,11 @@ public class playerControler2D : MonoBehaviour
     }
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal");
+        moveInput = Input.GetAxis(HorizontalInput);
 
 
         //add coyote time speak to tom.
-        jumpInput = Input.GetButton("Jump");
+        jumpInput = Input.GetButton(JumpInput);
 
         if (rb.velocity.y < 0)
       
