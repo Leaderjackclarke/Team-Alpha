@@ -75,6 +75,8 @@ MonoBehaviour:
   whatStopsMovement:
     serializedVersion: 2
     m_Bits: 128
+  HorizontalInput: HorizontalP2
+  VerticalInput: VerticalP2
 --- !u!1 &6422315376879932333
 GameObject:
   m_ObjectHideFlags: 0
