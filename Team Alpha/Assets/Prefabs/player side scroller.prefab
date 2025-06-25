@@ -54,7 +54,7 @@ MonoBehaviour:
   groundRadiusCheck: 0.2
   layers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   HorizontalInput: Horizontal
   JumpInput: Jump
   onGround: 0
