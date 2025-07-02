@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class EnterOnSpot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Transform targetLocation; // Assign in the Inspector
-
-    public float arrivalThreshold = 0.1f; // How close is close enough
-    public GameObject pressEnterText; // Assign the UI Text element in the Inspector
+   
+    public Transform targetLocation; 
+    public float arrivalThreshold = 0.1f;
+    public GameObject pressEnterText; 
     private bool hasReachedTarget = false;
+  
+    public GameObject LightSource;
+    private bool ison = false;
 
 
 
     void Start()
     {
-        // Ensure text object is initially hidden
+      
         if (pressEnterText != null)
         {
             pressEnterText.SetActive(false);
         }
+       
+        /*  if (arrivalThreshold != null)
+          {
+              pressEnterText.SetActive(false);
+          }*/
     }
 
 
@@ -29,32 +36,67 @@ public class EnterOnSpot : MonoBehaviour
         {
             MoveTowardsTarget();
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else 
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            
-            // Handle the "Press Enter" action here. For example:
+         
             Debug.Log("achived champ");
-            // Add your desired action here, like loading a new scene,
-            // changing game state, etc.
-            pressEnterText.SetActive(false); //hide it
+            Toggchange();
+            pressEnterText.SetActive(false); 
+          
         }
+      
     }
+    void Toggchange ()
+    {
+        if (!ison)
+        {
+            lightOn();
+        }
+        else
+        {
+            lightOff();
+        }
+        void lightOff()
+        {
+            LightSource.SetActive(false);
+            ison = false;
+        }
+
+
+
+
+    }
+    void lightOn() {
+
+        LightSource.SetActive(true);
+        ison = true;
+    }
+
 
 
     void MoveTowardsTarget()
     {
        
 
-        // Check if the player has reached the target location.
+       
         if (Vector3.Distance(transform.position, targetLocation.position) < arrivalThreshold)
         {
             hasReachedTarget = true;
             if (pressEnterText != null)
             {
-                pressEnterText.SetActive(true); // Show the text
-            }
+                pressEnterText.SetActive(true); 
+            }   
+
+            /* else 
+                 hasReachedTarget = false;
+             if (pressEnterText != null)
+             {
+                 pressEnterText.SetActive(false);
+             }*/
 
         }
+     
     }
 
 
