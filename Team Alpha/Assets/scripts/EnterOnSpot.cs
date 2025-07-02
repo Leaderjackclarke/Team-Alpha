@@ -57,16 +57,14 @@ public class EnterOnSpot : MonoBehaviour
         {
             lightOff();
         }
-        void lightOff()
-        {
-            LightSource.SetActive(false);
-            ison = false;
-        }
-
-
-
-
     }
+
+    void lightOff()
+    {
+        LightSource.SetActive(false);
+        ison = false;
+    }
+
     void lightOn() {
 
         LightSource.SetActive(true);
