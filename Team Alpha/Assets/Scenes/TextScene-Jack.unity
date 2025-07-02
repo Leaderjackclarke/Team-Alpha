@@ -312,7 +312,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -331,13 +331,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269274833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.76479346, y: -0, z: -0, w: 0.6442756}
-  m_LocalPosition: {x: -2.210022, y: 0.52233887, z: -0.017000198}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.020999953, y: 6.859999, z: -0.021999933}
+  m_LocalScale: {x: 1, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1139815777}
-  m_LocalEulerAnglesHint: {x: 99.77701, y: 0, z: 0}
+  m_Father: {fileID: 1399084877}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &362604782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 14ad7f9249d46744e980581cb05e4c41, type: 3}
@@ -1189,7 +1189,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 269274836}
   - {fileID: 1399084877}
   - {fileID: 1260877613}
   - {fileID: 1030892208}
@@ -1555,7 +1554,8 @@ Transform:
   m_LocalPosition: {x: 0.165, y: -0.359, z: -0.071}
   m_LocalScale: {x: 1, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 269274836}
   m_Father: {fileID: 1139815777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1399084878
