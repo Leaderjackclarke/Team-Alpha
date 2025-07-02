@@ -6,7 +6,7 @@ public class PlayerControllerTopDown : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
-    public Transform movePoint;
+    public Vector3 movePoint;
 
     public LayerMask whatStopsMovement;
     public string HorizontalInput = "Horizontal";
@@ -14,14 +14,14 @@ public class PlayerControllerTopDown : MonoBehaviour
 
     void Start()
     {
-        movePoint.parent = null;
+        movePoint = transform.position;
     }
 
     
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
+        transform.position = Vector3.MoveTowards(transform.position, movePoint, moveSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, movePoint) <= .05f)
 
         {
 
@@ -29,11 +29,11 @@ public class PlayerControllerTopDown : MonoBehaviour
 
             if (Mathf.Abs(newMovePosition.x) == 1f || Mathf.Abs(newMovePosition.z) == 1)
             {
-                Collider[] colliding = Physics.OverlapSphere(movePoint.position + new Vector3(0.5f, 0.5f, 0.5f) + newMovePosition, .2f, whatStopsMovement);
+                Collider[] colliding = Physics.OverlapSphere(movePoint + new Vector3(0.5f, 0.5f, 0.5f) + newMovePosition, .2f, whatStopsMovement);
                
                 if (colliding.Length <= 0) //Nothing in our way. We can move
                 {
-                    movePoint.position += newMovePosition;
+                    movePoint += newMovePosition;
                 }
                 //else if something there.
                 else 
@@ -52,4 +52,11 @@ public class PlayerControllerTopDown : MonoBehaviour
         }
 
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, movePoint);
+    }
+
 }

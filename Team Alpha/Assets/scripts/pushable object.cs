@@ -5,7 +5,7 @@ using UnityEngine;
 public class PushableObject : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Transform movePoint;
+    public Vector3 movePoint;
     public Collision collision;
 
     public LayerMask whatStopsMovement;
@@ -13,28 +13,30 @@ public class PushableObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movePoint.parent = null;
+        movePoint = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, movePoint, moveSpeed * Time.deltaTime);
     }
 
     public void PushObject(Vector3 newMovePosition)
     {
-        if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
+        if (Vector3.Distance(transform.position, movePoint) <= .05f)
         {
             if (Mathf.Abs(newMovePosition.x) == 1f || Mathf.Abs(newMovePosition.z) == 1)
             {
-                if (Physics.OverlapSphere(movePoint.position + newMovePosition, .2f, whatStopsMovement).Length <= 0)
+                if (Physics.OverlapSphere(movePoint + newMovePosition, .2f, whatStopsMovement).Length <= 0)
                 {
-                    movePoint.position += newMovePosition;
+                    movePoint += newMovePosition;
                 }
             }
         }
     }
+
+
 }
     
         
