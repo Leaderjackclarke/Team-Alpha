@@ -15,6 +15,11 @@ public class PlayerControllerSideScroller : MonoBehaviour
     public string HorizontalInput = "Horizontal";
     public string JumpInput = "Jump";
 
+    [SerializeField] private CharacterType characterType = CharacterType.SideScroller;
+
+    public CharacterType CharacterType { get { return characterType; } }
+
+
     Rigidbody rb;
     float moveInput;
     bool jumpInput = false;
@@ -81,6 +86,12 @@ public class PlayerControllerSideScroller : MonoBehaviour
         Gizmos.DrawWireSphere(transform.localPosition, groundRadiusCheck);
     }
 
+}
+
+public enum CharacterType
+{
+    SideScroller,
+    Topdown
 }
 
 
