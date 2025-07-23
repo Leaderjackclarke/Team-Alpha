@@ -54,7 +54,9 @@ MonoBehaviour:
   groundRadiusCheck: 0.2
   layers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
+  HorizontalInput: Horizontal
+  JumpInput: Jump
   onGround: 0
 --- !u!54 &6667896668492987962
 Rigidbody:
@@ -118,7 +120,7 @@ GameObject:
   - component: {fileID: 4650782926031663289}
   - component: {fileID: 2856796155419111464}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: TopImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +136,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: 1.747, z: 0}
-  m_LocalScale: {x: 0.1453, y: 0.17436, z: 0.17436}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 685832464812739622}
@@ -167,7 +169,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d0aa0252f8441f84cb4b4a7aedfcb8b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,7 +203,7 @@ GameObject:
   - component: {fileID: 7094669094876999544}
   - component: {fileID: 4914553043886343553}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: SideImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +219,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.01, y: 0.859, z: 0}
-  m_LocalScale: {x: 0.1453, y: 0.17436, z: 0.17436}
+  m_LocalScale: {x: 0.1, y: 0.2, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 685832464812739622}
@@ -250,7 +252,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d0aa0252f8441f84cb4b4a7aedfcb8b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
