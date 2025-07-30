@@ -2,27 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-<<<<<<< HEAD
 using UnityEngine.SceneManagement;
 
 public class EnterOnSpot : MonoBehaviour
 {
-    public GameObject pressEnterText;
-=======
-
-public class EnterOnSpot : MonoBehaviour
-{
-   
-    public Transform targetLocation; 
-    public float arrivalThreshold = 0.1f;
-    public GameObject pressEnterText; 
-    private bool hasReachedTarget = false;
-  
-    public GameObject LightSource;
-    private bool ison = false;
-    
->>>>>>> main
-
+    [SerializeField] GameObject pressEnterText;
+     
     [SerializeField] bool activated = false;
 
     [SerializeField] private UnityEvent spotActivate;
@@ -41,11 +26,6 @@ public class EnterOnSpot : MonoBehaviour
         {
             pressEnterText.SetActive(false);
         }
-
-        /*  if (arrivalThreshold != null)
-          {
-              pressEnterText.SetActive(false);
-          }*/
     }
 
 
@@ -53,41 +33,25 @@ public class EnterOnSpot : MonoBehaviour
     {
         if (inArea == true && Input.GetKeyDown(KeyCode.Return))
         {
-<<<<<<< HEAD
 
             Debug.Log("achived champ");
             //Toggchange();
             pressEnterText.SetActive(false);
             //ChangeScene(sceneChanger);
-
             //Toggle
             activated = !activated;
 
             if(activated == true)
             {
                 spotActivate?.Invoke();
-                ChangeScene("trans1");
-
             }
             else
             {
                 spotDeactivated?.Invoke();
             }
-=======
-            MoveTowardsTarget();
-        }
-        else 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-           
-            Debug.Log("achived champ");
-            Toggchange();
-            pressEnterText.SetActive(false);
-          
->>>>>>> main
         }
     }
-<<<<<<< HEAD
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -117,75 +81,57 @@ public class EnterOnSpot : MonoBehaviour
         inArea = false;
         pressEnterText.SetActive(false);
     }
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
 }
 
-//To redistubute into smaller self contained scripts
-class OldCode : MonoBehaviour
-{
-    public GameObject LightSource;
-    private bool ison = false;
-    public string sceneChanger;
+////To redistubute into smaller self contained scripts
+//class OldCode : MonoBehaviour
+//{
+//    public GameObject LightSource;
+//    private bool ison = false;
+//    public string sceneChanger;
 
-    private bool hasReachedTarget = false;
-    public Transform targetLocation;
-    public float arrivalThreshold = 0.1f;
+//    private bool hasReachedTarget = false;
+//    public Transform targetLocation;
+//    public float arrivalThreshold = 0.1f;
 
-=======
-    
-   
->>>>>>> main
-    void Toggchange ()
-    {
-        if (!ison)
-        {
-            lightOn();
-        }
-        else
-        {
-            lightOff();
-        }
-    }
 
-    void lightOff()
-    {
-        LightSource.SetActive(false);
-        ison = false;
-    }
+//    void Toggchange ()
+//    {
+//        if (!ison)
+//        {
+//            lightOn();
+//        }
+//        else
+//        {
+//            lightOff();
+//        }
+//    }
 
-    void lightOn() {
+//    void lightOff()
+//    {
+//        LightSource.SetActive(false);
+//        ison = false;
+//    }
 
-        LightSource.SetActive(true);
-        ison = true;
-    }
+//    void lightOn() {
+
+//        LightSource.SetActive(true);
+//        ison = true;
+//    }
 
 
 
-    void MoveTowardsTarget()
-    {
+//    void MoveTowardsTarget()
+//    {
 
-        if (Vector3.Distance(transform.position, targetLocation.position) < arrivalThreshold)
-        {
-            hasReachedTarget = true;
-            //if (pressEnterText != null)
-            //{
-            //    pressEnterText.SetActive(true); 
-            //}
-
-            /* else 
-                 hasReachedTarget = false;
-             if (pressEnterText != null)
-             {
-                 pressEnterText.SetActive(false);
-             }*/
-        }
+//        if (Vector3.Distance(transform.position, targetLocation.position) < arrivalThreshold)
+//        {
+//            hasReachedTarget = true;
+//        }
      
-    }
+//    }
 
  
 
 
-}
+//}
