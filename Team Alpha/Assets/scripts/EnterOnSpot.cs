@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnterOnSpot : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class EnterOnSpot : MonoBehaviour
   
     public GameObject LightSource;
     private bool ison = false;
+    
 
 
 
@@ -39,14 +41,16 @@ public class EnterOnSpot : MonoBehaviour
         else 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-         
+           
             Debug.Log("achived champ");
             Toggchange();
-            pressEnterText.SetActive(false); 
+            pressEnterText.SetActive(false);
           
         }
       
     }
+    
+   
     void Toggchange ()
     {
         if (!ison)
