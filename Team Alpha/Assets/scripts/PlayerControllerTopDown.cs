@@ -12,6 +12,9 @@ public class PlayerControllerTopDown : MonoBehaviour
     public string HorizontalInput = "Horizontal";
     public string VerticalInput = "Vertical";
 
+    [SerializeField] private CharacterType characterType = CharacterType.Topdown;
+    public CharacterType CharacterType { get { return characterType; } }
+
     void Start()
     {
         movePoint = transform.position;

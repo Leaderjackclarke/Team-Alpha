@@ -1,6 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+<<<<<<< HEAD
+using UnityEngine.SceneManagement;
+
+public class EnterOnSpot : MonoBehaviour
+{
+    public GameObject pressEnterText;
+=======
 
 public class EnterOnSpot : MonoBehaviour
 {
@@ -12,17 +20,28 @@ public class EnterOnSpot : MonoBehaviour
   
     public GameObject LightSource;
     private bool ison = false;
+    
+>>>>>>> main
 
+    [SerializeField] bool activated = false;
 
+    [SerializeField] private UnityEvent spotActivate;
+    [SerializeField] private UnityEvent spotDeactivated;
+
+    [SerializeField] private CharacterType acceptedCharacterType = CharacterType.SideScroller;
+
+    public CharacterType AcceptedCharacterType { get { return acceptedCharacterType; } }
+
+    bool inArea = false;
 
     void Start()
     {
-      
+
         if (pressEnterText != null)
         {
             pressEnterText.SetActive(false);
         }
-       
+
         /*  if (arrivalThreshold != null)
           {
               pressEnterText.SetActive(false);
@@ -32,21 +51,93 @@ public class EnterOnSpot : MonoBehaviour
 
     void Update()
     {
-        if (!hasReachedTarget)
+        if (inArea == true && Input.GetKeyDown(KeyCode.Return))
         {
+<<<<<<< HEAD
+
+            Debug.Log("achived champ");
+            //Toggchange();
+            pressEnterText.SetActive(false);
+            //ChangeScene(sceneChanger);
+
+            //Toggle
+            activated = !activated;
+
+            if(activated == true)
+            {
+                spotActivate?.Invoke();
+                ChangeScene("trans1");
+
+            }
+            else
+            {
+                spotDeactivated?.Invoke();
+            }
+=======
             MoveTowardsTarget();
         }
         else 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-         
+           
             Debug.Log("achived champ");
             Toggchange();
-            pressEnterText.SetActive(false); 
+            pressEnterText.SetActive(false);
           
+>>>>>>> main
         }
-      
     }
+<<<<<<< HEAD
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (acceptedCharacterType == CharacterType.SideScroller)
+        {
+            PlayerControllerSideScroller pss = other.GetComponent<PlayerControllerSideScroller>();
+            if (pss != null)
+            {
+                inArea = true;
+                pressEnterText.SetActive(true);
+            }
+        }
+        else if(acceptedCharacterType == CharacterType.Topdown)
+        {
+            PlayerControllerTopDown ptd = other.GetComponent<PlayerControllerTopDown>();
+            if (ptd != null)
+            {
+                inArea = true;
+                pressEnterText.SetActive(true);
+            }
+        }
+    }
+
+    //TODO: Fix bugs
+    private void OnTriggerExit(Collider other)
+    {
+        inArea = false;
+        pressEnterText.SetActive(false);
+    }
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+}
+
+//To redistubute into smaller self contained scripts
+class OldCode : MonoBehaviour
+{
+    public GameObject LightSource;
+    private bool ison = false;
+    public string sceneChanger;
+
+    private bool hasReachedTarget = false;
+    public Transform targetLocation;
+    public float arrivalThreshold = 0.1f;
+
+=======
+    
+   
+>>>>>>> main
     void Toggchange ()
     {
         if (!ison)
@@ -75,16 +166,14 @@ public class EnterOnSpot : MonoBehaviour
 
     void MoveTowardsTarget()
     {
-       
 
-       
         if (Vector3.Distance(transform.position, targetLocation.position) < arrivalThreshold)
         {
             hasReachedTarget = true;
-            if (pressEnterText != null)
-            {
-                pressEnterText.SetActive(true); 
-            }   
+            //if (pressEnterText != null)
+            //{
+            //    pressEnterText.SetActive(true); 
+            //}
 
             /* else 
                  hasReachedTarget = false;
@@ -92,10 +181,11 @@ public class EnterOnSpot : MonoBehaviour
              {
                  pressEnterText.SetActive(false);
              }*/
-
         }
      
     }
+
+ 
 
 
 }

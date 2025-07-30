@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/trans1.unity
+    guid: 3bc5278c83ba526499e25a41233b86ec
+  - enabled: 1
+    path: Assets/Scenes/trans2.unity
+    guid: 95cb7fdbe9dd57d4db9db8e15e9182dc
+  - enabled: 1
+    path: Assets/Scenes/TextScene-Jack.unity
+    guid: f94985d69b44c7a4fab7f885ee474765
   m_configObjects: {}
