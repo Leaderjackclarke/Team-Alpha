@@ -50,6 +50,8 @@ public class EnterOnSpot : MonoBehaviour
             if(activated == true)
             {
                 spotActivate?.Invoke();
+                ChangeScene("trans1");
+
             }
             else
             {
@@ -85,6 +87,10 @@ public class EnterOnSpot : MonoBehaviour
     {
         inArea = false;
         pressEnterText.SetActive(false);
+    }
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
 
@@ -146,10 +152,7 @@ class OldCode : MonoBehaviour
      
     }
 
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
+ 
 
 
 }
