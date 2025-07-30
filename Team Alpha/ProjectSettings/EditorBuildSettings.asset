@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/trans2.unity
     guid: 95cb7fdbe9dd57d4db9db8e15e9182dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TextScene-Jack.unity
     guid: f94985d69b44c7a4fab7f885ee474765
+  - enabled: 1
+    path: Assets/Scenes/TestScene-Wyatt.unity
+    guid: 39a4b1fd647537f47bf7b630240ca7a3
   m_configObjects: {}
