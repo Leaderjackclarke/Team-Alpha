@@ -2,11 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+<<<<<<< HEAD
 using UnityEngine.SceneManagement;
 
 public class EnterOnSpot : MonoBehaviour
 {
     public GameObject pressEnterText;
+=======
+
+public class EnterOnSpot : MonoBehaviour
+{
+   
+    public Transform targetLocation; 
+    public float arrivalThreshold = 0.1f;
+    public GameObject pressEnterText; 
+    private bool hasReachedTarget = false;
+  
+    public GameObject LightSource;
+    private bool ison = false;
+    
+>>>>>>> main
 
     [SerializeField] bool activated = false;
 
@@ -38,6 +53,7 @@ public class EnterOnSpot : MonoBehaviour
     {
         if (inArea == true && Input.GetKeyDown(KeyCode.Return))
         {
+<<<<<<< HEAD
 
             Debug.Log("achived champ");
             //Toggchange();
@@ -57,8 +73,21 @@ public class EnterOnSpot : MonoBehaviour
             {
                 spotDeactivated?.Invoke();
             }
+=======
+            MoveTowardsTarget();
+        }
+        else 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+           
+            Debug.Log("achived champ");
+            Toggchange();
+            pressEnterText.SetActive(false);
+          
+>>>>>>> main
         }
     }
+<<<<<<< HEAD
 
     private void OnTriggerEnter(Collider other)
     {
@@ -105,6 +134,10 @@ class OldCode : MonoBehaviour
     public Transform targetLocation;
     public float arrivalThreshold = 0.1f;
 
+=======
+    
+   
+>>>>>>> main
     void Toggchange ()
     {
         if (!ison)
