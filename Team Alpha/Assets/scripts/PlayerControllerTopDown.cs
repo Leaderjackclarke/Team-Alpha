@@ -32,7 +32,7 @@ public class PlayerControllerTopDown : MonoBehaviour
 
             if (Mathf.Abs(newMovePosition.x) == 1f || Mathf.Abs(newMovePosition.z) == 1)
             {
-                Collider[] colliding = Physics.OverlapSphere(movePoint + new Vector3(0.5f, 0.5f, 0.5f) + newMovePosition, .2f, whatStopsMovement);
+                Collider[] colliding = Physics.OverlapSphere(movePoint + newMovePosition, .2f, whatStopsMovement);
                
                 if (colliding.Length <= 0) //Nothing in our way. We can move
                 {
@@ -41,9 +41,11 @@ public class PlayerControllerTopDown : MonoBehaviour
                 //else if something there.
                 else 
                 {
+                    Debug.Log("Checking to push");
                     PushableObject pushableObject = colliding[0].GetComponent<PushableObject>();
                     if(pushableObject != null)
                     {
+                        Debug.Log("push");
                         pushableObject.PushObject(newMovePosition);
                     }
                 }
@@ -60,6 +62,7 @@ public class PlayerControllerTopDown : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, movePoint);
+        Gizmos.DrawWireSphere(movePoint + new Vector3(0.5f, 0.5f, 0.5f), 0.2f);
     }
 
 }
