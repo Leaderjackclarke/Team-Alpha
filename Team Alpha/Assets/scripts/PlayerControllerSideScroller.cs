@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerControllerSideScroller : MonoBehaviour
 {
     public float MovementSpeed = 2.0f;
     public float jumpSpeed = 1f;
-    public float groundRadiusCheck = 0.3f;
+   public float groundRadiusCheck = 0.3f;
+    private float Direction = 0f;
     public LayerMask layers;
     bool faceRight = false;
     //SpriteRenderer characterSprite;
     //Animator anim;
 
+    private float coyoteTime = 0.2f;
+    private float coyoteTimeCounter;
     public string HorizontalInput = "Horizontal";
-    public string JumpInput = "Jump";
+   public string JumpInput = "Jump";
 
     [SerializeField] private CharacterType characterType = CharacterType.SideScroller;
 
@@ -32,17 +36,39 @@ public class PlayerControllerSideScroller : MonoBehaviour
     }
     void Update()
     {
-        moveInput = Input.GetAxis(HorizontalInput);
+       Direction = Input.GetAxis("Horizontal");
 
-        //add coyote time speak to tom.
-        jumpInput = Input.GetButton(JumpInput);
+        if (Direction > 0f)
+        {
+            rb.velocity = new Vector2(Direction * MovementSpeed, rb.velocity.y);
+        }
+        else if (Direction < 0f)
+        {
+            rb.velocity = new Vector2(Direction * MovementSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+       // if (jumpInput = Input.GetButton("Jump"))
+       // if (Input.GetButtonDown("Jump"))
+       // {
+           //  rb.velocity = new Vector2 (rb.velocity.x, jumpSpeed);
+      //  }
 
-        if (rb.velocity.y  < 0)
+     //jumpInput = Input.GetAxis(HorizontalInput);
 
-        if (moveInput < 0)
-            faceRight = false;
-        else if (moveInput > 0)
-            faceRight = true;
+     //add coyote time speak to tom.
+     jumpInput = Input.GetButton(JumpInput);
+
+
+
+     /*if (rb.velocity.y  < 0)
+
+     if (moveInput < 0)
+         faceRight = false;
+     else if (moveInput > 0)
+         faceRight = true;*/
         // characterSprite.flipX = faceRight;
 
     }
@@ -78,7 +104,7 @@ public class PlayerControllerSideScroller : MonoBehaviour
         return Physics.OverlapSphere(transform.localPosition, groundRadiusCheck, layers).Length > 0;
 
         //Collider3D hitCollider = Physics2D.OverlapCircle(transform.position, groundRadiusCheck, layers);
-        //return hitCollider != null;
+       // return hitCollider != null;
     }
 
     private void OnDrawGizmos()
