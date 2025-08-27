@@ -54,9 +54,10 @@ MonoBehaviour:
   groundRadiusCheck: 0.2
   layers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   HorizontalInput: Horizontal
   JumpInput: Jump
+  characterType: 0
   onGround: 0
 --- !u!54 &6667896668492987962
 Rigidbody:
