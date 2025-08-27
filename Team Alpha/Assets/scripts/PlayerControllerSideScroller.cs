@@ -102,10 +102,8 @@ public class PlayerControllerSideScroller : MonoBehaviour
 
     bool GroundCheck()
     {
-      //  RaycastHit hitInfo;
-
-
-        return Physics.OverlapSphere(transform.localPosition, groundRadiusCheck, layers).Length > 0;
+        //  RaycastHit hitInfo;
+        return Physics.OverlapSphere(transform.position, groundRadiusCheck, layers).Length > 0;
 
         //Collider3D hitCollider = Physics2D.OverlapCircle(transform.position, groundRadiusCheck, layers);
        // return hitCollider != null;
