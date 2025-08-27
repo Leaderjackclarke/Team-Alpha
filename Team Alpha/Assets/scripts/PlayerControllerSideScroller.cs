@@ -77,8 +77,9 @@ public class PlayerControllerSideScroller : MonoBehaviour
 
     private void FixedUpdate()
     {
+       
         Vector3 vel = rb.velocity + transform.right * moveInput * MovementSpeed * Time.deltaTime;
-
+      
         onGround = GroundCheck();
         /* rb.velocity = vel*/
         
@@ -92,16 +93,17 @@ public class PlayerControllerSideScroller : MonoBehaviour
         {
             vel += Vector3.down * 1.3f;
         }
-        rb.velocity = vel;
+
+        Vector3 worldVector = transform.parent.transform.TransformVector(vel);
+
+        rb.velocity = worldVector;
     }
 
 
     bool GroundCheck()
     {
-      //  RaycastHit hitInfo;
-
-
-        return Physics.OverlapSphere(transform.localPosition, groundRadiusCheck, layers).Length > 0;
+        //  RaycastHit hitInfo;
+        return Physics.OverlapSphere(transform.position, groundRadiusCheck, layers).Length > 0;
 
         //Collider3D hitCollider = Physics2D.OverlapCircle(transform.position, groundRadiusCheck, layers);
        // return hitCollider != null;
