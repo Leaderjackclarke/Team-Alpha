@@ -24,6 +24,7 @@ public class PushableObject : MonoBehaviour
 
     public void PushObject(Vector3 newMovePosition)
     {
+        Debug.Log("Push");
         if (Vector3.Distance(transform.position, movePoint) <= .05f)
         {
             if (Mathf.Abs(newMovePosition.x) == 1f || Mathf.Abs(newMovePosition.z) == 1)
