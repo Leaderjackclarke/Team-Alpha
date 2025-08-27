@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EnterOnSpot : MonoBehaviour
 {
-    [SerializeField] GameObject pressEnterText;
+    //[SerializeField] GameObject pressEnterText;
      
     [SerializeField] bool activated = false;
 
@@ -22,10 +22,10 @@ public class EnterOnSpot : MonoBehaviour
     void Start()
     {
 
-        if (pressEnterText != null)
-        {
-            pressEnterText.SetActive(false);
-        }
+        //if (pressEnterText != null)
+        //{
+        //    pressEnterText.SetActive(false);
+        //}
     }
 
 
@@ -36,7 +36,7 @@ public class EnterOnSpot : MonoBehaviour
 
             Debug.Log("achived champ");
             //Toggchange();
-            pressEnterText.SetActive(false);
+            //pressEnterText.SetActive(false);
             //ChangeScene(sceneChanger);
             //Toggle
             activated = !activated;
@@ -61,7 +61,7 @@ public class EnterOnSpot : MonoBehaviour
             if (pss != null)
             {
                 inArea = true;
-                pressEnterText.SetActive(true);
+               // pressEnterText.SetActive(true);
             }
         }
         else if(acceptedCharacterType == CharacterType.Topdown)
@@ -70,7 +70,7 @@ public class EnterOnSpot : MonoBehaviour
             if (ptd != null)
             {
                 inArea = true;
-                pressEnterText.SetActive(true);
+               // pressEnterText.SetActive(true);
             }
         }
     }
@@ -79,7 +79,7 @@ public class EnterOnSpot : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         inArea = false;
-        pressEnterText.SetActive(false);
+       // pressEnterText.SetActive(false);
     }
 }
 
