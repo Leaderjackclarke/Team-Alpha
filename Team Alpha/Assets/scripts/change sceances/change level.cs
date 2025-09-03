@@ -9,7 +9,7 @@ public class changelevel : MonoBehaviour
   
         public void Loadlevel()
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
     
 }
