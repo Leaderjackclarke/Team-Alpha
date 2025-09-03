@@ -6,15 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Game/intro to leve 1.unity
+    guid: a897e5a0539d4514092f6ac74f526b7b
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: db7b652274e523541ad13eb788ba76cc
   - enabled: 1
-    path: Assets/Scenes/newGameLevel.unity
+    path: Assets/Scenes/TextScene-Jack.unity
     guid: f94985d69b44c7a4fab7f885ee474765
   - enabled: 1
     path: Assets/Scenes/BaseLevelScene.unity
     guid: 6944b356927fd164782b809e9a1c2925
   - enabled: 1
+    path: Assets/Scenes/Main Game/level1.unity
+    guid: 08f07c227e48cad47ab2a52dd3244020
+  - enabled: 1
+    path: Assets/Scenes/Main Game/totorial 1.unity
+    guid: 575d3a38178ca0f4182a22e7a9462ee0
+  - enabled: 0
+    path: Assets/Scenes/totorial.unity
+    guid: 83206e2866ffa094cac238623e85551f
+  - enabled: 0
     path: Assets/Scenes/top down player.unity
     guid: 2caf5db6e569332479a2c41cdd80d024
   m_configObjects: {}
