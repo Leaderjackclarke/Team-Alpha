@@ -2019,11 +2019,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4036930378628812043, guid: a06459aa40156a54fb3c64a5d4f9b320, type: 3}
       propertyPath: jumpSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4036930378628812043, guid: a06459aa40156a54fb3c64a5d4f9b320, type: 3}
       propertyPath: MovementSpeed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4036930378628812043, guid: a06459aa40156a54fb3c64a5d4f9b320, type: 3}
       propertyPath: layers.m_Bits
