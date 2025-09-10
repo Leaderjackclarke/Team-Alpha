@@ -8859,23 +8859,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb972a9afa7ffa40a612bec21bb0a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTextValue: {fileID: 0}
-  volumeSlider: {fileID: 0}
+  volumeTextValue: {fileID: 1792805617}
+  volumeSlider: {fileID: 109089464}
   defaultVolume: 100
-  controllerSenTextValue: {fileID: 0}
-  controllerSenSlider: {fileID: 0}
+  controllerSenTextValue: {fileID: 676705672}
+  controllerSenSlider: {fileID: 519166486}
   defaultSen: 5
   mainControllerSen: 5
-  invertYToggle: {fileID: 0}
-  brightnessSlider: {fileID: 0}
-  brightnessTextValue: {fileID: 0}
+  invertYToggle: {fileID: 1893735428}
+  brightnessSlider: {fileID: 1186501552}
+  brightnessTextValue: {fileID: 2097757818}
   defaultBrightness: 1
-  qualityDropdown: {fileID: 0}
-  fullScreenToggle: {fileID: 0}
-  confirmationPrompt: {fileID: 0}
+  qualityDropdown: {fileID: 1398447449}
+  fullScreenToggle: {fileID: 1416812537}
+  confirmationPrompt: {fileID: 2053345325}
   _newGameLevel: 
   noSaveGameDialog: {fileID: 0}
-  resolutionDropdown: {fileID: 0}
+  resolutionDropdown: {fileID: 2024743163}
 --- !u!4 &1367123370
 Transform:
   m_ObjectHideFlags: 0
