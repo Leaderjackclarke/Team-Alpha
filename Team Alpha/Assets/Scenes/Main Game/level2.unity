@@ -421,6 +421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table
       objectReference: {fileID: 0}
+    - target: {fileID: 8495531415526215964, guid: c22c3509dabc931439ca272003709a04, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -707,6 +711,10 @@ PrefabInstance:
     - target: {fileID: 932454510786918407, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
       propertyPath: m_Name
       value: Chair_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 932454510786918407, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2352775814607499762, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1029,9 +1037,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 810573448803818462, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2443568378913658156, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
       propertyPath: m_Name
       value: Refrigerator.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443568378913658156, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3418340738560177053, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1072,6 +1088,10 @@ PrefabInstance:
     - target: {fileID: 3418340738560177053, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574359520113594989, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1126,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 932454510786918407, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
       propertyPath: m_Name
       value: Chair_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 932454510786918407, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2352775814607499762, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1929,9 +1953,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 810573448803818462, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2443568378913658156, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
       propertyPath: m_Name
       value: Refrigerator.001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443568378913658156, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3418340738560177053, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1972,6 +2004,10 @@ PrefabInstance:
     - target: {fileID: 3418340738560177053, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574359520113594989, guid: 9153bb52dd1dfe34d95b5e8a087922a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3663,6 +3699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kitchen (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6170991348710190432, guid: c94912676b5c50545826143e963e2436, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3679,6 +3719,14 @@ PrefabInstance:
     - target: {fileID: 1748814229084806678, guid: f4c12671c9e16b1469dc22488da96cbd, type: 3}
       propertyPath: m_Name
       value: PlayerTopDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235700967012482611, guid: f4c12671c9e16b1469dc22488da96cbd, type: 3}
+      propertyPath: characterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235700967012482611, guid: f4c12671c9e16b1469dc22488da96cbd, type: 3}
+      propertyPath: whatStopsMovement.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6060564734847087876, guid: f4c12671c9e16b1469dc22488da96cbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4155,6 +4203,10 @@ PrefabInstance:
     - target: {fileID: 932454510786918407, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
       propertyPath: m_Name
       value: Chair_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 932454510786918407, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2352775814607499762, guid: 96c0ccf25fe899646a432d9ab29fbee0, type: 3}
       propertyPath: m_LocalPosition.x
