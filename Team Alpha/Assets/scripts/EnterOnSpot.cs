@@ -9,7 +9,7 @@ public class EnterOnSpot : MonoBehaviour
    // [SerializeField] GameObject pressEnterText;
      
     [SerializeField] bool activated = false;
-
+    public bool needButtonPress = false;
     [SerializeField] private UnityEvent spotActivate;
     [SerializeField] private UnityEvent spotDeactivated;
 
@@ -18,6 +18,7 @@ public class EnterOnSpot : MonoBehaviour
     public CharacterType AcceptedCharacterType { get { return acceptedCharacterType; } }
 
     bool inArea = false;
+
 
     void Start()
     {
@@ -39,18 +40,35 @@ public class EnterOnSpot : MonoBehaviour
             //pressEnterText.SetActive(false);
             //ChangeScene(sceneChanger);
             //Toggle
-            activated = !activated;
 
-            if(activated == true)
+            bool activateButton = false;
+
+            if (needButtonPress == true)
             {
-                spotActivate?.Invoke();
+                activateButton = Input.GetButtonDown("Fire1");
             }
             else
             {
-                spotDeactivated?.Invoke();
+                activateButton = true;
+            }
+
+            if (activateButton == true)
+            {
+                activated = !activated;
+
+                if (activated == true)
+                {
+                    spotActivate?.Invoke();
+                }
+                else if (needButtonPress == false)
+                {
+                    spotDeactivated?.Invoke();
+                }
             }
         }
     }
+
+
 
 
     private void OnTriggerEnter(Collider other)
