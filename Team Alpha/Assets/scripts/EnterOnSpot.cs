@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class EnterOnSpot : MonoBehaviour
 {
-    [SerializeField] GameObject pressEnterText;
+   // [SerializeField] GameObject pressEnterText;
      
     [SerializeField] bool activated = false;
-
+    public bool needButtonPress = false;
     [SerializeField] private UnityEvent spotActivate;
     [SerializeField] private UnityEvent spotDeactivated;
 
@@ -19,38 +19,56 @@ public class EnterOnSpot : MonoBehaviour
 
     bool inArea = false;
 
+
     void Start()
     {
 
-        if (pressEnterText != null)
-        {
-            pressEnterText.SetActive(false);
-        }
+        //if (pressEnterText != null)
+        //{
+        //    pressEnterText.SetActive(false);
+        //}
     }
 
 
     void Update()
     {
-        if (inArea == true && Input.GetKeyDown(KeyCode.Return))
+        if (inArea == true) //  && Input.GetKeyDown(KeyCode.Return)
         {
 
             Debug.Log("achived champ");
             //Toggchange();
-            pressEnterText.SetActive(false);
+            //pressEnterText.SetActive(false);
             //ChangeScene(sceneChanger);
             //Toggle
-            activated = !activated;
 
-            if(activated == true)
+            bool activateButton = false;
+
+            if (needButtonPress == true)
             {
-                spotActivate?.Invoke();
+                activateButton = Input.GetButtonDown("Fire1");
             }
             else
             {
-                spotDeactivated?.Invoke();
+                activateButton = true;
+            }
+
+            if (activateButton == true)
+            {
+                activated = !activated;
+
+                if (activated == true)
+                {
+                    spotActivate?.Invoke();
+                }
+                else if (needButtonPress == false)
+                {
+                    spotDeactivated?.Invoke();
+                }
             }
         }
     }
+
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -61,7 +79,7 @@ public class EnterOnSpot : MonoBehaviour
             if (pss != null)
             {
                 inArea = true;
-                pressEnterText.SetActive(true);
+               // pressEnterText.SetActive(true);
             }
         }
         else if(acceptedCharacterType == CharacterType.Topdown)
@@ -70,7 +88,7 @@ public class EnterOnSpot : MonoBehaviour
             if (ptd != null)
             {
                 inArea = true;
-                pressEnterText.SetActive(true);
+               // pressEnterText.SetActive(true);
             }
         }
     }
@@ -79,7 +97,7 @@ public class EnterOnSpot : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         inArea = false;
-        pressEnterText.SetActive(false);
+        //pressEnterText.SetActive(false);
     }
 }
 

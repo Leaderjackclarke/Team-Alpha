@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerControllerSideScroller : MonoBehaviour
@@ -50,11 +49,11 @@ public class PlayerControllerSideScroller : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-       // if (jumpInput = Input.GetButton("Jump"))
-       // if (Input.GetButtonDown("Jump"))
-       // {
-           //  rb.velocity = new Vector2 (rb.velocity.x, jumpSpeed);
-      //  }
+        //if (jumpInput = Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
+        {
+             rb.velocity = new Vector2 (rb.velocity.x, jumpSpeed);
+        }
 
      //jumpInput = Input.GetAxis(HorizontalInput);
 

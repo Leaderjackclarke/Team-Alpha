@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4235700967012482611}
   - component: {fileID: 6587340647290880134}
   - component: {fileID: 6875899578277912679}
+  - component: {fileID: 9050133702496564983}
   m_Layer: 0
   m_Name: PlayerTopDown
   m_TagString: Untagged
@@ -128,6 +129,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &9050133702496564983
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748814229084806678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f0ef4081ac57e1d4fa8277bc30a0d208, type: 3}
+  m_Controller: {fileID: 9100000, guid: 11f063883092cd44894aa03e8fc77968, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8303703807546782612
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +273,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[3]
       value: 
       objectReference: {fileID: 2100000, guid: b78583363b937dd45ad2e4ab5a5aa183, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 14ad7f9249d46744e980581cb05e4c41, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 11f063883092cd44894aa03e8fc77968, type: 2}
     - target: {fileID: 6868716418057165105, guid: 14ad7f9249d46744e980581cb05e4c41, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
