@@ -27,6 +27,7 @@ public class PlayerControllerSideScroller : MonoBehaviour
     float moveInput;
     bool jumpInput = false;
 
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -50,10 +51,10 @@ public class PlayerControllerSideScroller : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
         //if (jumpInput = Input.GetButton("Jump"))
-        if (Input.GetButtonDown("Jump"))
-        {
-             rb.velocity = new Vector2 (rb.velocity.x, jumpSpeed);
-        }
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //     rb.velocity = new Vector2 (rb.velocity.x, jumpSpeed);
+        //}
 
      //jumpInput = Input.GetAxis(HorizontalInput);
 
@@ -85,10 +86,11 @@ public class PlayerControllerSideScroller : MonoBehaviour
         if (jumpInput == true  && onGround == true )
         {
             vel.y = jumpSpeed;
+            jumpInput = false;
         }
 
         //TODO make jumping more marioesk
-        if(onGround== false && vel.y < 1)
+        if(onGround == false && vel.y < 1)
         {
             vel += Vector3.down * 1.3f;
         }
@@ -110,7 +112,8 @@ public class PlayerControllerSideScroller : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.localPosition, groundRadiusCheck);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, groundRadiusCheck);
     }
 
 }
