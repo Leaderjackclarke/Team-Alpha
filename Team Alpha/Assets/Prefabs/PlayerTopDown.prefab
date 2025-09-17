@@ -207,6 +207,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7823293702887809713, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6058681868354798846, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -255,6 +259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rose FBX
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4167280743394806330, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -274,6 +282,10 @@ PrefabInstance:
     - target: {fileID: 4167280743394806330, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6868716418057165105, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8187179361008594350, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -318,6 +330,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
+    - {fileID: 65702495048144492, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2692acc7bc531f4c944e76d071c79fc, type: 3}
