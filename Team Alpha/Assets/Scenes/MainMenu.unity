@@ -5697,6 +5697,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9e969c6acfc444eab7b7a90f1f6ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 0
+  menuController: {fileID: 0}
+  volumeTextValue: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  brightnessSlider: {fileID: 0}
+  brightnessTextValue: {fileID: 0}
+  qualityDropdown: {fileID: 0}
+  fullScreenToggle: {fileID: 0}
+  controllerSenTextValue: {fileID: 0}
+  controllerSenSlider: {fileID: 0}
+  invertYToggle: {fileID: 0}
 --- !u!4 &852921908
 Transform:
   m_ObjectHideFlags: 0
@@ -11751,6 +11762,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb972a9afa7ffa40a612bec21bb0a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeTextValue: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 100
+  controllerSenTextValue: {fileID: 0}
+  controllerSenSlider: {fileID: 0}
+  defaultSen: 5
+  mainControllerSen: 5
+  invertYToggle: {fileID: 0}
+  brightnessSlider: {fileID: 0}
+  brightnessTextValue: {fileID: 0}
+  defaultBrightness: 1
+  qualityDropdown: {fileID: 0}
+  fullScreenToggle: {fileID: 0}
+  confirmationPrompt: {fileID: 0}
+  _newGameLevel: level1
+  noSaveGameDialog: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
 --- !u!1 &1763671243
 GameObject:
   m_ObjectHideFlags: 0
