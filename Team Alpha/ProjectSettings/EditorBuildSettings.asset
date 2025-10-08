@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Game/totorial 1.unity
     guid: 575d3a38178ca0f4182a22e7a9462ee0
+  - enabled: 1
+    path: Assets/Scenes/Main Game/top down player 1.unity
+    guid: 4556ebe501abd0e4cad9ae4b3a53db50
   m_configObjects: {}

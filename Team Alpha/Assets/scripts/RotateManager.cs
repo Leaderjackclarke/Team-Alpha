@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateManager : MonoBehaviour
 {
     [SerializeField] PlayerControllerSideScroller player;
-    [SerializeField] Camera sideScrollCamera;
+    [SerializeField] Transform sideScrollCamera;
 
     public static RotateManager instance;
 
@@ -22,9 +22,9 @@ public class RotateManager : MonoBehaviour
     public void RotateAroundPlayerDegs(float degreesToRotate, Transform cameraNewPos)
     {
         player.transform.parent = null;
-        sideScrollCamera.transform.parent = null;
+        sideScrollCamera.parent = null;
 
-        sideScrollCamera.transform.localPosition = cameraStartingPoint;
+        sideScrollCamera.localPosition = cameraStartingPoint;
 
 
         //Moving to point to rotate around
@@ -32,14 +32,14 @@ public class RotateManager : MonoBehaviour
          
         //Connection things that we want to rotate
         player.transform.parent = transform;
-        sideScrollCamera.transform.parent = transform;
+        sideScrollCamera.parent = transform;
 
         //Rotate
         transform.Rotate(0, degreesToRotate,0);
 
         if (cameraNewPos != null)
         {
-            sideScrollCamera.transform.position = cameraNewPos.position;
+            sideScrollCamera.position = cameraNewPos.position;
         }
 
 
