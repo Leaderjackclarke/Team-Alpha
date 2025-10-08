@@ -35,7 +35,7 @@ public class EnterOnSpot : MonoBehaviour
         if (inArea == true) //  && Input.GetKeyDown(KeyCode.Return)
         {
 
-            Debug.Log("achived champ");
+            //Debug.Log("achived champ");
             //Toggchange();
             //pressEnterText.SetActive(false);
             //ChangeScene(sceneChanger);

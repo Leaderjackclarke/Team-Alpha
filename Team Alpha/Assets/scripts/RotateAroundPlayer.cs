@@ -5,8 +5,11 @@ using UnityEngine;
 public class RotateAroundPlayer : MonoBehaviour
 {
     public float degreesToRotate = 90;
+
+    public Transform cameraNewPos;
+
     public void StartRotation()
     {
-        RotateManager.instance.RotateAroundPlayerDegs(degreesToRotate);
+        RotateManager.instance.RotateAroundPlayerDegs(degreesToRotate, cameraNewPos);
     }
 }

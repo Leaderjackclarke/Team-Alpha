@@ -9,16 +9,24 @@ public class RotateManager : MonoBehaviour
 
     public static RotateManager instance;
 
+    Vector3 cameraStartingPoint;
+
+
     private void Awake()
     {
         instance = this;
+        cameraStartingPoint = sideScrollCamera.transform.localPosition;
     }
 
 
-    public void RotateAroundPlayerDegs(float degreesToRotate)
+    public void RotateAroundPlayerDegs(float degreesToRotate, Transform cameraNewPos)
     {
         player.transform.parent = null;
         sideScrollCamera.transform.parent = null;
+
+        sideScrollCamera.transform.localPosition = cameraStartingPoint;
+
+
         //Moving to point to rotate around
         transform.position = player.transform.position;
          
@@ -28,6 +36,12 @@ public class RotateManager : MonoBehaviour
 
         //Rotate
         transform.Rotate(0, degreesToRotate,0);
+
+        if (cameraNewPos != null)
+        {
+            sideScrollCamera.transform.position = cameraNewPos.position;
+        }
+
 
     }
 
